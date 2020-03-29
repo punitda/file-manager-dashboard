@@ -19,7 +19,7 @@ export default function SideBar() {
         <img src={logo} className="w-8 h-8" alt="logo" />
         <span className="ml-1 font-semibold text-xl text-white">Cloud IO</span>
       </div>
-      <nav className="mt-8 pb-8">
+      <nav className="mt-8 pb-8 relative sidebar-nav">
         <ul className="list-none">
           {navItems.map(navItem => (
             <li
@@ -36,8 +36,6 @@ export default function SideBar() {
           ))}
         </ul>
       </nav>
-
-      <div className="sidebar-divider"></div>
 
       <div className="mt-auto relative">
         <ul className="w-40 my-4 p-3 bg-gray-700 rounded-lg ">
