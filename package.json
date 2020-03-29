@@ -44,6 +44,6 @@
     "concurrently": "^5.0.2",
     "cross-env": "^6.0.3",
     "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "1.2.0"
   }
 }
