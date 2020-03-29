@@ -23,10 +23,8 @@ export default function SideBar() {
         <ul className="list-none">
           {navItems.map(navItem => (
             <li
-              className={`flex items-center ${
-                navItem.isActive
-                  ? "text-gray-100 border-r-8 border-gray-100 rounded-md rounded-r-none"
-                  : "text-gray-600 border-none"
+              className={`flex items-center relative ${
+                navItem.isActive ? "text-gray-100 item-active" : "text-gray-600"
               } mb-4`}
               key={navItem.text}
             >
