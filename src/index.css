@@ -2,19 +2,10 @@
 
 @tailwind components;
 
-.app-logo {
-  height: 40vmin;
-  pointer-events: none;
-  animation: app-logo-spin infinite 20s linear;
-}
-
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-divider {
+  @apply border-b-2 border-gray-700;
+  width: calc(100% + 2rem);
+  margin-left: -2rem;
 }
 
 @tailwind utilities;

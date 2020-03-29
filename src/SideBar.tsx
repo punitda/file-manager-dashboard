@@ -14,12 +14,12 @@ import HorizontalDotsIcon from "./icons/HorizontalDotsIcon";
 
 export default function SideBar() {
   return (
-    <div className="bg-gray-800 text-gray-100 py-4 flex flex-col">
-      <div className="flex items-center mt-2 pl-8">
+    <div className="bg-gray-800 text-gray-100 py-4 pl-8 flex flex-col">
+      <div className="flex items-center mt-2">
         <img src={logo} className="w-8 h-8" alt="logo" />
         <span className="ml-1 font-semibold text-xl text-white">Cloud IO</span>
       </div>
-      <nav className="mt-8 pl-8 pb-8 border-b-2 border-gray-700">
+      <nav className="mt-8 pb-8">
         <ul className="list-none">
           {navItems.map(navItem => (
             <li
@@ -37,8 +37,10 @@ export default function SideBar() {
         </ul>
       </nav>
 
-      <div className="mt-auto text-center relative">
-        <ul className="w-40 mx-auto my-4 p-3 bg-gray-700 rounded-lg ">
+      <div className="sidebar-divider"></div>
+
+      <div className="mt-auto relative">
+        <ul className="w-40 my-4 p-3 bg-gray-700 rounded-lg ">
           {actions.map(action => (
             <li
               className="flex items-center mb-1 last:mb-0 ml-2"
