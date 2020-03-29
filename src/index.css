@@ -2,10 +2,16 @@
 
 @tailwind components;
 
-.sidebar-divider {
-  @apply border-b-2 border-gray-700;
+.sidebar-nav:after {
+  content: "";
   width: calc(100% + 2rem);
+  height: 2px;
+  position: absolute;
   margin-left: -2rem;
+  top: 0;
+  left: 0;
+  top: 100%;
+  background: #4a5568;
 }
 
 @tailwind utilities;
