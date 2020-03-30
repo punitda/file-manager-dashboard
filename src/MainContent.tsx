@@ -27,7 +27,7 @@ export default function MainContent() {
 
 function RecentProjects() {
   return (
-    <>
+    <div>
       <div className="w-full flex items-center justify-around flex-wrap">
         <h2 className="flex-1 text-2xl font-semibold text-gray-800 my-6">
           Recently Used
@@ -68,7 +68,7 @@ function RecentProjects() {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 
