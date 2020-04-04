@@ -134,7 +134,7 @@ function SharedWithMe() {
             <div className="h-24 xl:h-32 p-4 flex flex-col justify-around rounded-lg bg-white shadow-lg">
               <div className="flex flex-wrap items-start">
                 <FileIcon className="w-8 h-8 text-orange-500" />
-                <div className="ml-20 flex items-center">
+                <div className="ml-auto mr-3 flex items-center">
                   {project.images.map(imageUrl => (
                     <span className="-ml-2 rounded-full border-2">
                       <img
