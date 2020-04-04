@@ -2,12 +2,17 @@ import React from "react";
 import BellIcon from "./icons/BellIcon";
 import SettingsIcon from "./icons/SettingsIcon";
 import ChevronDownIcon from "./icons/ChevronDownIcon";
+import DocumentIcon from "./icons/DocumentIcon";
+import CameraIcon from "./icons/CameraIcon";
+import ImageIcon from "./icons/ImageIcon";
+import MenuAltIcon from "./icons/MenuAltIcon";
 
 export default function Stats() {
   return (
     <div className="bg-gray-100">
       <Profile />
       <hr className="text-gray-600 w-full mt-6" />
+      <Storage />
     </div>
   );
 }
@@ -36,3 +41,74 @@ function Profile() {
     </div>
   );
 }
+
+function Storage() {
+  return (
+    <div className="p-8">
+      <h2 className="text-2xl text-gray-800">Storage</h2>
+
+      <div className="flex justify-center mt-12">
+        <div className="flex flex-col items-center justify-center bg-white w-40 h-40 rounded-full shadow-sm">
+          <h3 className="text-4xl font-semibold text-gray-800">85%</h3>
+          <span className="text-gray-500">Used</span>
+        </div>
+      </div>
+
+      <p className="text-gray-400 font-medium mt-6 text-center">
+        420.2 GB of 500 GB used
+      </p>
+
+      <div className="mt-8 grid grid-cols-folder row-gap-3 col-gap-1">
+        {foldersInfo.map(folder => (
+          <>
+            <span className={`${folder.color} rounded-lg w-10 h-10 p-3`}>
+              {folder.symbol}
+            </span>
+            <div>
+              <h3 className="text-base text-gray-700 font-semibold">
+                {folder.name}
+              </h3>
+              <span className="text-gray-500 text-xs">
+                {`${folder.filesCount} files`}
+              </span>
+            </div>
+            <span className="bg-white rounded-md shadow-sm text-center text-gray-900 font-medium w-20 h-8 p-2 text-gray-500 text-sm">
+              {folder.space}
+            </span>
+          </>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const foldersInfo = [
+  {
+    name: "Documents",
+    filesCount: 720,
+    space: "200 GB",
+    color: "bg-orange-500",
+    symbol: <DocumentIcon className="w-4 h-4 text-white" />
+  },
+  {
+    name: "Videos",
+    filesCount: 124,
+    space: "125 GB",
+    color: "bg-blue-500",
+    symbol: <CameraIcon className="w-4 h-4 text-white" />
+  },
+  {
+    name: "Images",
+    filesCount: 1200,
+    space: "75 GB",
+    color: "bg-green-500",
+    symbol: <ImageIcon className="w-4 h-4 text-white" />
+  },
+  {
+    name: "Others",
+    filesCount: 30,
+    space: "50 GB",
+    color: "bg-gray-500",
+    symbol: <MenuAltIcon className="w-4 h-4 text-white" />
+  }
+];
