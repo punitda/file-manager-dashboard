@@ -10,19 +10,25 @@ export default function MainContent() {
   return (
     <div className="bg-gray-100">
       <div className="p-8">
-        <div className="relative">
-          <input
-            className="px-8 py-2 w-full rounded bg-white placeholder-gray-500 text-gray-700 border-gray-300 border focus:outline-none"
-            type="text"
-            placeholder="Search"
-          />
-          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-            <SearchIcon className="w-4 h-4 text-gray-500" />
-          </span>
-        </div>
+        <Search />
         <RecentProjects />
         <RecentFiles />
       </div>
+    </div>
+  );
+}
+
+function Search() {
+  return (
+    <div className="relative">
+      <input
+        className="px-8 py-2 w-full rounded bg-white placeholder-gray-500 text-gray-700 border-gray-300 border focus:outline-none"
+        type="text"
+        placeholder="Search"
+      />
+      <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+        <SearchIcon className="w-4 h-4 text-gray-500" />
+      </span>
     </div>
   );
 }
