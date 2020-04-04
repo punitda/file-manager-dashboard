@@ -12,6 +12,7 @@ export default function MainContent() {
       <Search />
       <RecentProjects />
       <RecentFiles />
+      <SharedWithMe />
     </div>
   );
 }
@@ -118,6 +119,47 @@ function RecentFiles() {
   );
 }
 
+function SharedWithMe() {
+  return (
+    <div className="mt-8">
+      <div className="flex items-center">
+        <h2 className="flex-1 text-2xl text-gray-800 my-6">Share With Me</h2>
+        <span className="ml-auto text-gray-700 hover:text-gray-900 cursor-pointer">
+          View All
+        </span>
+      </div>
+      <ul className="grid grid-cols-3 xl:grid-cols-4 gap-3">
+        {sharedWithMe.map(project => {
+          return (
+            <div className="h-24 xl:h-32 p-4 flex flex-col justify-around rounded-lg bg-white shadow-lg">
+              <div className="flex flex-wrap items-start">
+                <FileIcon className="w-8 h-8 text-orange-500" />
+                <div className="ml-20 flex items-center">
+                  {project.images.map(imageUrl => (
+                    <span className="-ml-2 rounded-full border-2">
+                      <img
+                        className="h-6 w-6 rounded-full object-cover"
+                        src={imageUrl}
+                        alt="profile photos"
+                      />
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-auto">
+                <h3 className="text-sm font-semibold text-gray-700">
+                  {project.name}
+                </h3>
+                <span className="text-xs text-gray-500">{`${project.files} Files`}</span>
+              </div>
+            </div>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 const recentlyUsedProjects = [
   {
     name: "App Project",
@@ -173,5 +215,32 @@ const recentFiles = [
     lastModifiedAt: "Mar 12, 2020",
     color: "bg-orange-500",
     symbol: "ZIP"
+  }
+];
+
+const sharedWithMe = [
+  {
+    name: "Landing Page",
+    files: 12,
+    images: [
+      "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+      "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
+    ]
+  },
+  {
+    name: "Illustrated Pack",
+    files: 24,
+    images: [
+      "https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+      "https://images.unsplash.com/photo-1547404415-5eb20ddab016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
+    ]
+  },
+  {
+    name: "CV Design",
+    files: 6,
+    images: [
+      "https://images.unsplash.com/photo-1513152697235-fe74c283646a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+      "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
+    ]
   }
 ];
