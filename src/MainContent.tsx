@@ -8,12 +8,10 @@ import ArrowDownIcon from "./icons/ArrowDownIcon";
 
 export default function MainContent() {
   return (
-    <div className="bg-gray-100">
-      <div className="p-8">
-        <Search />
-        <RecentProjects />
-        <RecentFiles />
-      </div>
+    <div className="bg-gray-100 p-8">
+      <Search />
+      <RecentProjects />
+      <RecentFiles />
     </div>
   );
 }
