@@ -6,7 +6,7 @@ import Stats from "./Stats";
 
 const App: React.FC = () => {
   return (
-    <div className="grid grid-cols-main col-gap-4 h-screen">
+    <div className="grid grid-cols-main col-gap-2 h-screen">
       <SideBar />
       <MainContent />
       <Stats />
