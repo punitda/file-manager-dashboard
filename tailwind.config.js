@@ -3,7 +3,8 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         main: "220px 1fr 330px",
-        recentfiles: "1fr 20% 20% 5%"
+        recentfiles: "1fr 20% 20% 5%",
+        folder: "20% 1fr 20%"
       },
       gridTemplateRows: {},
       fontSize: {
