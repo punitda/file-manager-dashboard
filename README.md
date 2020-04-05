@@ -1,4 +1,4 @@
-# File Manager Dashboard built using CRA + TailwindCss.
+# File Manager Dashboard built using TailwindCss.
 
 [Dribble Link](https://dribbble.com/shots/10747116-Cloud-Web-App/)
 
