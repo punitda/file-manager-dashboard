@@ -50,7 +50,7 @@ function Storage() {
       <h2 className="text-2xl text-gray-800">Storage</h2>
 
       <div className="flex justify-center mt-12">
-        <div className="flex flex-col items-center justify-center bg-white w-40 h-40 rounded-full shadow-sm">
+        <div className="flex flex-col items-center justify-center bg-white w-40 h-40 rounded-full shadow-sm border-t-2 border-r-2 border-green-600">
           <h3 className="text-4xl font-semibold text-gray-800">85%</h3>
           <span className="text-gray-500">Used</span>
         </div>
