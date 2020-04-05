@@ -6,6 +6,7 @@ import DocumentIcon from "./icons/DocumentIcon";
 import CameraIcon from "./icons/CameraIcon";
 import ImageIcon from "./icons/ImageIcon";
 import MenuAltIcon from "./icons/MenuAltIcon";
+import RocketSvg from "./icons/RocketSvg";
 
 export default function Stats() {
   return (
@@ -13,6 +14,7 @@ export default function Stats() {
       <Profile />
       <hr className="text-gray-600 w-full mt-6" />
       <Storage />
+      <BuyMoreSpace />
     </div>
   );
 }
@@ -59,7 +61,7 @@ function Storage() {
       </p>
 
       <div className="mt-8 grid grid-cols-folder row-gap-3 col-gap-1">
-        {foldersInfo.map(folder => (
+        {foldersInfo.map((folder) => (
           <>
             <span className={`${folder.color} rounded-lg w-10 h-10 p-3`}>
               {folder.symbol}
@@ -82,33 +84,48 @@ function Storage() {
   );
 }
 
+function BuyMoreSpace() {
+  return (
+    <div className="flex flex-col items-center py-8 px-4 m-8 bg-white rounded-lg shadow-sm">
+      <RocketSvg className="w-20 h-20" />
+      <h2 className="text-xl text-gray-700 mt-1 tracking-wide">
+        Buy more space now!
+      </h2>
+      <p className="text-sm text-gray-500 mt-1">Upgrade to cloud premium</p>
+      <button className="w-40 mt-8 p-2 bg-orange-500 text-sm text-gray-100 rounded-md">
+        Upgrade Account
+      </button>
+    </div>
+  );
+}
+
 const foldersInfo = [
   {
     name: "Documents",
     filesCount: 720,
     space: "200 GB",
     color: "bg-orange-500",
-    symbol: <DocumentIcon className="w-4 h-4 text-white" />
+    symbol: <DocumentIcon className="w-4 h-4 text-white" />,
   },
   {
     name: "Videos",
     filesCount: 124,
     space: "125 GB",
     color: "bg-blue-500",
-    symbol: <CameraIcon className="w-4 h-4 text-white" />
+    symbol: <CameraIcon className="w-4 h-4 text-white" />,
   },
   {
     name: "Images",
     filesCount: 1200,
     space: "75 GB",
     color: "bg-green-500",
-    symbol: <ImageIcon className="w-4 h-4 text-white" />
+    symbol: <ImageIcon className="w-4 h-4 text-white" />,
   },
   {
     name: "Others",
     filesCount: 30,
     space: "50 GB",
     color: "bg-gray-500",
-    symbol: <MenuAltIcon className="w-4 h-4 text-white" />
-  }
+    symbol: <MenuAltIcon className="w-4 h-4 text-white" />,
+  },
 ];
