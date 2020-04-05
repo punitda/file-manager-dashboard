@@ -1,20 +1,21 @@
-# CRA Template for using React with Typescript and TailwindCss
+# File Manager Dashboard built using CRA + TailwindCss.
 
+[Dribble Link](https://dribbble.com/shots/10747116-Cloud-Web-App/)
 
-It runs [PurgeCss](https://github.com/FullHuman/purgecss) by default when building the project.
+![Design](screenshots/dribble_design.png)
 
-> Note : `index.css` is the main CSS file. You can add custom css classes to it, use tailwind directives or define other .css file if needed.
+[Website Link](https://file-manager-dashboard.netlify.com/)
 
 ---
 
 To run the project, run following command:
+
 ```bash
 yarn start
 ```
 
 To build the project, run following command:
+
 ```bash
 yarn build
 ```
-
-
