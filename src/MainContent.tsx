@@ -42,14 +42,14 @@ function RecentProjects() {
           <ListIcon className="inline ml-1 w-6 h-6 text-gray-500" />
         </div>
       </div>
-      <ul className="grid grid-cols-3 xl:grid-cols-4 gap-3">
-        {recentlyUsedProjects.map(project => {
+      <ul className="grid grid-cols-4 2xl:grid-cols-5 gap-3">
+        {recentlyUsedProjects.map((project) => {
           return (
             <div className="h-32 xl:h-40 p-4 relative flex flex-col justify-around rounded-lg bg-white shadow-lg">
               <div className="flex flex-wrap items-start">
                 <FileIcon className="w-8 h-8 text-orange-500" />
                 <div className="ml-12 flex items-center">
-                  {project.images.map(imageUrl => (
+                  {project.images.map((imageUrl) => (
                     <span className="-ml-2 rounded-full border-2 border-white">
                       <img
                         className="h-6 w-6 rounded-full object-cover"
@@ -95,7 +95,7 @@ function RecentFiles() {
           <span>Members</span>
           <span>Last Modified</span>
         </div>
-        {recentFiles.map(file => (
+        {recentFiles.map((file) => (
           <div className="grid grid-cols-recentfiles bg-white rounded-md shadow-sm p-3">
             <h3 className="text-sm text-gray-700 font-semibold">
               <span
@@ -128,14 +128,14 @@ function SharedWithMe() {
           View All
         </span>
       </div>
-      <ul className="grid grid-cols-3 xl:grid-cols-4 gap-3">
-        {sharedWithMe.map(project => {
+      <ul className="grid grid-cols-4 2xl:grid-cols-5 gap-3">
+        {sharedWithMe.map((project) => {
           return (
             <div className="h-24 xl:h-32 p-4 flex flex-col justify-around rounded-lg bg-white shadow-lg">
               <div className="flex flex-wrap items-start">
                 <FileIcon className="w-8 h-8 text-orange-500" />
                 <div className="ml-auto mr-3 flex items-center">
-                  {project.images.map(imageUrl => (
+                  {project.images.map((imageUrl) => (
                     <span className="-ml-2 rounded-full border-2">
                       <img
                         className="h-6 w-6 rounded-full object-cover"
@@ -166,25 +166,25 @@ const recentlyUsedProjects = [
     createdAt: "Created: 20.02.2020",
     images: [
       "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
-      "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
-    ]
+      "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+    ],
   },
   {
     name: "Project Fitbit",
     createdAt: "Created: 28.02.2020",
     images: [
       "https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
-      "https://images.unsplash.com/photo-1547404415-5eb20ddab016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
-    ]
+      "https://images.unsplash.com/photo-1547404415-5eb20ddab016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+    ],
   },
   {
     name: "Client Document",
     createdAt: "Created: 20.12.2019",
     images: [
       "https://images.unsplash.com/photo-1513152697235-fe74c283646a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
-      "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
-    ]
-  }
+      "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+    ],
+  },
 ];
 
 const recentFiles = [
@@ -193,29 +193,29 @@ const recentFiles = [
     membersCount: 5,
     lastModifiedAt: "Mar 8, 2020",
     color: "bg-orange-400",
-    symbol: "Ps"
+    symbol: "Ps",
   },
   {
     name: "Ture Photos",
     membersCount: 12,
     lastModifiedAt: "Mar 10, 2020",
     color: "bg-green-600",
-    symbol: "Ph"
+    symbol: "Ph",
   },
   {
     name: "Dashboard Structure",
     membersCount: 10,
     lastModifiedAt: "Mar 9, 2020",
     color: "bg-red-500",
-    symbol: "PDF"
+    symbol: "PDF",
   },
   {
     name: "Character Illustration",
     membersCount: 3,
     lastModifiedAt: "Mar 12, 2020",
     color: "bg-orange-500",
-    symbol: "ZIP"
-  }
+    symbol: "ZIP",
+  },
 ];
 
 const sharedWithMe = [
@@ -224,23 +224,23 @@ const sharedWithMe = [
     files: 12,
     images: [
       "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
-      "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
-    ]
+      "https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+    ],
   },
   {
     name: "Illustrated Pack",
     files: 24,
     images: [
       "https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
-      "https://images.unsplash.com/photo-1547404415-5eb20ddab016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
-    ]
+      "https://images.unsplash.com/photo-1547404415-5eb20ddab016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+    ],
   },
   {
     name: "CV Design",
     files: 6,
     images: [
       "https://images.unsplash.com/photo-1513152697235-fe74c283646a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
-      "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80"
-    ]
-  }
+      "https://images.unsplash.com/photo-1584202532967-6390de14ecac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=144&h=144&q=80",
+    ],
+  },
 ];
